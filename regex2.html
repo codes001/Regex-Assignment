@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression II</title>
+</head>
+<body>
+    <h1>Hello world</h1>
+    <script>
+        // Regular Expression Tests
+
+        // Test 1: Matching "car" or "cat"
+        const regexForCarOrCat = /car|cat/;
+        const textToTest1 = "car and cat";
+        const result1 = regexForCarOrCat.test(textToTest1);
+        console.log("Test 1 Result:", result1);
+
+        // Test 2: Matching "pop" or "prop" with an optional 'r'
+        const regexForPopOrProp = /pr?op/;
+        const textToTest2 = "pop prop";
+        const result2 = regexForPopOrProp.test(textToTest2);
+        console.log("Test 2 Result:", result2);
+
+        // Test 3: Matching "ferret," "ferry," or "ferrari"
+        const regexForFerrWords = /ferr(et|y|ari)/;
+        const textToTest3 = "ferret ferry ferrari";
+        const result3 = regexForFerrWords.test(textToTest3);
+        console.log("Test 3 Result:", result3);
+
+        // Test 4: Matching words ending in "ious"
+        const regexForWordsEndingInIous = /\b\w+ious\b/;
+        const textToTest4 = "tedious";
+        const result4 = regexForWordsEndingInIous.test(textToTest4);
+        console.log("Test 4 Result:", result4);
+
+        // Test 5: Matching a whitespace character followed by a period, comma, colon, or semicolon
+        const regexForWhitespaceFollowedByPunctuation = /\s[.,;:]/;
+        const textToTest5 = " .,:;";
+        const result5 = regexForWhitespaceFollowedByPunctuation.test(textToTest5);
+        console.log("Test 5 Result:", result5);
+
+        // Test 6: Matching words longer than six letters
+        const regexForWordsLongerThanSixLetters = /\w{7,}/;
+        const textToTest6 = "mrexpendible";
+        const result6 = regexForWordsLongerThanSixLetters.test(textToTest6);
+        console.log("Test 6 Result:", result6);
+
+        // Test 7: Matching words without the letter 'e' (or 'E')
+        const regexForWordsWithoutE = /\b[^eE\s]+\b/;
+        const textToTest7 = "musa";
+        const result7 = regexForWordsWithoutE.test(textToTest7);
+        console.log("Test 7 Result:", result7);
+    </script>
+</body>
+</html>

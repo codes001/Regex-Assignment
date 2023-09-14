@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex I</title>
+</head>
+<body>
+    <h1>Hello world</h1>
+    <script>
+        let dialogueText = "John said, 'I can't believe it.' Mary replied, 'Neither can I.'";
+        // Define a regular expression pattern to identify single quotes within dialogue
+        const dialoguePattern = /'([^']+)'/g;
+
+        // Replace single quotes with double quotes within dialogue
+        let formattedText = dialogueText.replace(dialoguePattern, '"$1"');
+        console.log(formattedText, "########## It works #########");
+    </script>
+</body>
+</html>
